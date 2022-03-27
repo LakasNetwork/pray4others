@@ -363,9 +363,9 @@ section {
       li {
         a {
           display: block;
-          height: 80px;
-          width: 80px;
-          line-height: 80px;
+          height: 60px;
+          width: 60px;
+          line-height: 60px;
           font-size: 40px;
           border-radius: 100%;
           color: white;
@@ -380,6 +380,12 @@ section {
           background-color: #3b5998;
           &:hover {
             background-color: #344e86;
+          }
+        }
+        &.social-instagram a {
+          background-color: #fb3958;
+          &:hover {
+            background-color: #ff3859;
           }
         }
         &.social-google-plus a {
