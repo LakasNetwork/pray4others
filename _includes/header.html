@@ -32,9 +32,9 @@
                             <p><label><input type="checkbox" name="gdpr" value="1" required /> I agree to receive email
                                     updates.</label></p>
                             <!-- no botz please -->
-                            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
+                            <div class="sendfox-div" aria-hidden="true"><input type="text"
                                     name="a_password" tabindex="-1" value="" autocomplete="off" /></div>
-                            <p><button type="submit" style="background-color: #000; padding: 10px;">Let's Pray Together</button></p>
+                            <p><button type="submit" class="sendfox-button">Let's Pray Together</button></p>
                         </form>
                         <script src="https://sendfox.com/js/form.js"></script>
                         <style>
@@ -43,6 +43,14 @@
                             }
                             .sendfox-input {
                                 color: #000;
+                                padding: 6px 10px;
+                            }
+                            .sendfox-button {
+                                background-color: #000; 
+                                padding: 10px;
+                            }
+                            .sendfox-div {
+                                position: absolute; left: -5000px;
                             }
                             ::placeholder {
                                 /* Chrome, Firefox, Opera, Safari 10.1+ */
