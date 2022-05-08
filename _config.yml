@@ -25,7 +25,7 @@ social:
   - title: instagram
     url: https://instagram.com/pray4othersapp
   - title: rss
-    url: http://www.pray4others.com/feed.xml
+    url: /feed.xml
   #- title: github
   #  url: http://github.com/jekyll
 
