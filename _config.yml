@@ -1,7 +1,8 @@
 # Site settings
 title: Pray 4 Others
 email: pray4others@lakas.network
-description: A community that prays with and for each other. 
+description: The community that prays with and for each other. 
+author: Team Prayer Warriors
 
 baseurl: "" # the subpath of your site, e.g. /blog/ (If you use organization leave empty)
 url: "https://pray4others.github.io" # the base hostname & protocol for your site
@@ -23,6 +24,8 @@ social:
     url: https://facebook.com/pray4othersapp
   - title: instagram
     url: https://instagram.com/pray4othersapp
+  - title: rss
+    url: http://www.pray4others.com/feed.xml
   #- title: github
   #  url: http://github.com/jekyll
 
@@ -35,3 +38,7 @@ exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 
 gems: [jekyll-paginate, jekyll-feed]
 # Build settings
+
+# Instructions from https://dzhavat.github.io/2020/01/19/adding-an-rss-feed-to-github-pages.html
+plugins:
+  - jekyll-feed
