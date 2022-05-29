@@ -46,4 +46,4 @@ We can get in touch by:
 
 =========
 
-For more details, read the [documentation](http://jekyllrb.com/)
+For more details, read the [documentation](https://jekyllrb.com/)

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+<!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'https://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+<svg xmlns="https://www.w3.org/2000/svg" version="1.1">
 <defs>
 <font id="simple-line-icons" horiz-adv-x="1024">
 <font-face descent="-64" underline-position="0" unicode-range="U+0020-E617" units-per-em="1024" underline-thickness="0" bbox="-3.63064 -66.0327 1030.76 962.035" font-family="simple-line-icons" panose-1="2 0 5 3 0 0 0 0 0 0" font-weight="400" ascent="960"/>

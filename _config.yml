@@ -27,7 +27,7 @@ social:
   - title: rss
     url: /feed.xml
   #- title: github
-  #  url: http://github.com/jekyll
+  #  url: https://github.com/jekyll
 
 # Build settings
 markdown: kramdown
