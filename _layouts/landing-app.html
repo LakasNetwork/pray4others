@@ -16,8 +16,9 @@ function getMobileOperatingSystem() {
  
     // Windows Phone must come first because its UA also contains "Android"
     if (/windows phone/i.test(userAgent)) {
-        //return "Windows Phone";
-        window.location.replace("/landing-win");
+        // return "Windows Phone";
+        // no Windows App so redirect to Android
+        window.location.replace("/landing-android");
     }
     else if (/android/i.test(userAgent)) {
         // return "Android";
