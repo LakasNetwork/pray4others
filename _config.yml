@@ -24,6 +24,8 @@ social:
     url: https://instagram.com/pray4othersapp
   - title: twitter
     url: https://twitter.com/pray4othersapp
+  - title: envelope
+    url: mailto:pray4others@lakas.network
   - title: rss
     url: /feed.xml
   #- title: github
