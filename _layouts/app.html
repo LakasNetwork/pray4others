@@ -27,6 +27,7 @@ function getMobileOperatingSystem() {
     // iOS detection from: http://stackoverflow.com/a/9039885/177710
     else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
         //return "iOS";
+        // <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf4S2DIwRQnO3Nbw3-Pd8-KA6pTl5m-XYp1UUJvQP8QnqYwAw/viewform?embedded=true" width="640" height="844" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
         window.location.replace("https://apps.apple.com/us/app/pray-4-others/id1637310576");
     }
     else {
