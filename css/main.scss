@@ -3,6 +3,20 @@
 
 @charset "utf-8";
 
+.gform-input {
+        width: 100%;
+        border: 1px solid rgb(118, 118, 118);
+}
+
+.gform-text {
+        color: #000;
+        padding: 6px 10px;
+}
+.gform-textarea {
+        height: 20rem;
+}
+
+
 // Example Defaults
 // $base-font-family: Helvetica, Arial, sans-serif;
 // $base-font-size:   16px;
