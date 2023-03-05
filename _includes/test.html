@@ -1,0 +1,67 @@
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7 col-sm-push-5"><!-- style="background-color: aqua;" -->
+                <div class="header-content">
+                    <div class="header-content-inner text-left">
+                        <h2>Receive a prayer.<br />
+                            Pray for one another.<br />
+                            Let our prayers work together!</h2>
+                        <small>The Prayer Warriors App is still under development.<br />If you wanna know when we're
+                            ready to launch, please leave your name and email below. Thanks!</small><br />&nbsp;
+
+                        <!-- https://github.com/levinunnink/html-form-to-google-sheet -->
+                        <!-- https://docs.google.com/spreadsheets/d/1zAgY-1o4skpmeNwwmsNnJhvo6hK9j7bc1lPIRRwoNJI/edit?resourcekey#gid=590329091 -->
+                        <form id="google-form" method="POST" action="https://script.google.com/macros/s/AKfycbzjjw4dSzF1G39foQL5zZp8hpOPh4ScRANEwOc7hO35_DftrdOYlTc-w8196RfAu1tu/exec">
+                            <p>
+                                <input class="gform-input gform-text" name="Name (Optional)" type="text" placeholder="Name (Optional)">
+                            </p>
+                            <p>
+                                <textarea class="gform-input gform-textarea" name="Prayer Request" placeholder="Enter Prayer Request..." required></textarea>
+                            </p>
+                            <p>
+                                <button class="btn btn-block btn-primary btn-lg mt-auto" type="submit">Send Prayer Intentions</button>
+                            </p>
+
+                        </form>
+
+                        <script>
+                            window.addEventListener("load", function() {
+                            const form = document.getElementById('google-form');
+                            form.addEventListener("submit", function(e) {
+                                e.preventDefault();
+                                const data = new FormData(form);
+                                const action = e.target.action;
+                                fetch(action, {
+                                method: 'POST',
+                                body: data,
+                                })
+                                .then(() => {
+                                alert("Success!");
+                                })
+                            });
+                            });
+
+                        </script>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-4 col-sm-offset-1 col-sm-pull-7"><!-- style="background-color:chartreuse;" -->
+                <div class="device-container">
+                    <div class="device-mockup iphone6_plus portrait white">
+                        <div class="device">
+                            <div class="screen">
+                                <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                                <img src="/img/app-splash.png" class="img-responsive" alt="">
+                            </div>
+                            <div class="button">
+                                <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
