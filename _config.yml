@@ -44,3 +44,4 @@ gems: [jekyll-paginate, jekyll-feed]
 # Instructions from https://dzhavat.github.io/2020/01/19/adding-an-rss-feed-to-github-pages.html
 plugins:
   - jekyll-feed
+  - jekyll-paginate
