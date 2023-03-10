@@ -5,28 +5,21 @@
                 <div class="header-content">
                     <div class="header-content-inner text-left">
                         <h2>Let others pray for you!</h2>
-                        <h4><b>Your prayer requests will be sent to your Prayer Warriors every Saturday.</b></h4>
-                        <small>If you would like to be a Prayer Warrior, please sign-up <a href="register">here</a>.</small><br />&nbsp;
-
+                        <h4 class="mb-0"><b>Your prayer requests will be sent to your Prayer Warriors every Saturday.</b></h4>
+                        <small>If you would like to be a Prayer Warrior, please sign-up <a href="register">here</a>.</small><br/>&nbsp;
+                        <form id="google-form" method="POST" action="https://script.google.com/macros/s/AKfycbzjjw4dSzF1G39foQL5zZp8hpOPh4ScRANEwOc7hO35_DftrdOYlTc-w8196RfAu1tu/exec">
+                            <p><input class="gform-input gform-text" name="Name (Optional)" type="text" placeholder="Name (Optional)"></p>
+                            <p><textarea class="gform-input gform-textarea" name="Prayer Request" id="PrayerRequest" placeholder="Enter Prayer Request..." required></textarea></p>
+                            <p><button class="btn btn-block btn-primary btn-lg mt-auto" type="submit">Send Prayer Intentions</button></p>
+                            <p><label id="response"></label></p>
+                        </form>
                         <!-- https://github.com/levinunnink/html-form-to-google-sheet -->
                         <!-- https://docs.google.com/spreadsheets/d/1zAgY-1o4skpmeNwwmsNnJhvo6hK9j7bc1lPIRRwoNJI/edit?resourcekey#gid=590329091 -->
-                        <form id="google-form" method="POST" action="https://script.google.com/macros/s/AKfycbzjjw4dSzF1G39foQL5zZp8hpOPh4ScRANEwOc7hO35_DftrdOYlTc-w8196RfAu1tu/exec">
-                            <p>
-                                <input class="gform-input gform-text" name="Name (Optional)" type="text" placeholder="Name (Optional)">
-                            </p>
-                            <p>
-                                <textarea class="gform-input gform-textarea" name="Prayer Request" placeholder="Enter Prayer Request..." required></textarea>
-                            </p>
-                            <p>
-                                <button class="btn btn-block btn-primary btn-lg mt-auto" type="submit">Send Prayer Intentions</button>
-                            </p>
-
-                        </form>
-
                         <script>
                             window.addEventListener("load", function() {
                             const form = document.getElementById('google-form');
                             form.addEventListener("submit", function(e) {
+                                $("#response").text("Sending request...");
                                 e.preventDefault();
                                 const data = new FormData(form);
                                 const action = e.target.action;
@@ -35,7 +28,16 @@
                                 body: data,
                                 })
                                 .then(() => {
-                                alert("Success!");
+                                var str = $("#PrayerRequest").val();
+                                $("#response").text("Your request has been sent: " + str);
+                                $("#PrayerRequest").val("");
+                                $("#PrayerRequest").focus();
+
+                                    var seconds = 5;  
+                                        setTimeout(function () {  
+                                            $("#response").text("");
+                                    }, seconds * 1000);  
+
                                 })
                             });
                             });
